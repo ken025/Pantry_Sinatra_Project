@@ -68,14 +68,17 @@ class ItemsController < ApplicationController
 
                 redirect "items/new"
             end
+        end 
 
             # anything with '/:id' => looks up a specific item
         delete '/items/:id' do 
             @item = Item.find_by_id(params[:id])
+            if @item.user.id == curent_user.id
 
             # .delete only deletes the object, .destroy deletes de object and asscociated objects
-            @item.destroy
-            
+                @item.destroy
+            else 
+
             redirect "/items"
         end 
     end

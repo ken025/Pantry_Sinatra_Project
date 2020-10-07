@@ -1,5 +1,27 @@
 class SessionsController < ApplicationController
 
+    get '/signup' do
+        if logged_in?
+
+        redirect to "/items"
+        else
+
+        erb :"sesions/signup"
+        end
+      end
+
+      post '/signup' do
+        if 
+          @user = User.create(email: params[:email], password: params[:password])
+          session[:user_id] = @user.id
+          
+          redirect to '/items'
+        else  
+          
+          redirect to '/signup'
+        end
+      end
+
     get '/login' do
 
         erb :"sessions/login"

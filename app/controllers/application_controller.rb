@@ -10,6 +10,11 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "thisshouldbeasecret"
   end
 
+  get '/' do 
+
+    erb :index
+  end 
+
 # helper methods to limit user accessibility 
 helpers do
     def logged_in?

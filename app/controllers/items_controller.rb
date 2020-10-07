@@ -15,18 +15,28 @@ class ItemsController < ApplicationController
     
     # Creates new item
         get '/items/new' do 
+            if logged_in?
             @users = User.all
+
         erb :"items/new"
+            else 
+
+                redirect '/login' 
+            end 
         end 
     
     # Shows user specific item, by its id number
         get '/items/:id' do 
             #binding.pry
+        if logged_in?
             id = params[:id]
             @item = Item.find_by_id(id) 
     
         erb :"items/show"
-        end 
+        else 
+            redirect '/login'
+        end
+    end 
     
     #Posts the new item to the table of items
         post '/items' do

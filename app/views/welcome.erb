@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-  <head>>
+  <head>
     <title>MyPantry</title>
   </head>
   <body>
@@ -8,13 +8,9 @@
    <nav>
   <% if logged_in? %>
 
-    <a href="/items/new"> Add Item </a>
-    <a href="/logout"> Log Out </a>
-    <p>Welcome, <%=current_user.email %></p>
-
   <% else %>
     <a href="/signup">Sign Up</a>
-    <a href="/login"> Sign In </a>
+    <a href="/login"> Log In </a>
   <%end %>
 
 </nav>

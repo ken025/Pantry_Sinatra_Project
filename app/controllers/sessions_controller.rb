@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     post '/login' do
         #binding.pry
         #finds the user
-        user = User.find_by(email: params[:email])
+        user = User.find_by(username: params[:username])
 
         #authenticates the user (from decrypt gem)
         if user && user.authenticate(params[:password])

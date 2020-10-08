@@ -1,13 +1,8 @@
 class SessionsController < ApplicationController
 
     get '/signup' do
-        if logged_in?
-
-        redirect "/items"
-        else
-
-        redirect "/signup"
-        end
+      
+      erb :"/signup"
       end
 
       post '/signup' do

@@ -12,8 +12,9 @@ class ApplicationController < Sinatra::Base
 
   get '/' do 
 
-    erb :index
+    erb :welcome
   end 
+  
 
 # helper methods to limit user accessibility 
 helpers do

@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
 
             redirect "/items"
         else
-
+          flash[:alert] = "Sorry, the email and/or password you entered was incorrect. Please try again."
             redirect "/login"
         end
     end
@@ -28,9 +28,6 @@ class SessionsController < ApplicationController
         session.clear
         
         redirect '/welcome'
-      else
-        
-        redirect '/'
       end
     end
 end

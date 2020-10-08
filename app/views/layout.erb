@@ -8,6 +8,14 @@
   <div class="container">
   <h1>Welcome to MyPantry!</h1>
   <img class="z_h_9d80b z_h_2f2f0" src="https://image.shutterstock.com/image-vector/canned-goods-row-tinned-food-260nw-1016249392.jpg" alt="Canned goods in a row. Tinned goods food product stuff, preserved food, supplied in a sealed can. Vector flat style cartoon illustration isolated on white background" data-automation="mosaic-grid-cell-image">
+  
+  <!-- loops through each of the flash keys, gives them a block and displays the aler -->
+  <div class="wrapper">
+  <% flash.keys.each do | type|  %>
+    <div>
+      <%= flash[type] %>
+    </div>
+  <% end %>
 
   <%= yield %>
   

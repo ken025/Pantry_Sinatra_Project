@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
         erb :"items/new"
             else 
 
-                redirect '/login' 
+                redirect '/welcome' 
             end 
         end 
     

@@ -27,7 +27,10 @@ class SessionsController < ApplicationController
       if logged_in?
         session.clear
         
-        redirect '/welcome'
+        erb :'/welcome'
+      else
+        
+        redirect '/'
       end
     end
 end

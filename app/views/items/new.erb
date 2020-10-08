@@ -1,17 +1,15 @@
 <h1> Enter an item and the quantity:</h1>
 
-<form method="POST" action="/posts">
+<form method="POST" action="/items">
     <select name="user_id">
         <% @users.each do | user |%>
             <option value="<%= user.id %>"><%= user.username %></option>
         <% end %>
     </select><br />
 
-<form method="POST" action="/items">
-    <h3> <label for="name"> Name: </label> </h3> 
-    <input type="text" name="name"> 
-    <h3> <label for="quantity"> Quantity: </label> </h3>
-    <input type="text" name="quantity">
-    <input type="SUBMIT" value="Add Item">
+
+    Name: <input type="text" name="name"><br />
+    Quantity: <input type="text" name="quantity"><br />
+    <input type="submit">
 </form>
 

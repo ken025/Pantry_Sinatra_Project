@@ -1,3 +1,5 @@
+<a href="/items">Back to your MyPantry!</a><br /><br />
+
 <h1><%= @item.name.upcase %> </h1>
 
 <h2> Quantity: <%= @item.quantity %> </h2>
@@ -5,8 +7,6 @@
 
 <a href="/items/<%= @item.id %>/edit">Edit this item</a><br />
 
-<a href="/items">Back to your MyPantry!</a><br />
-<br />
 <form method="POST" action="/items/<%= @item.id %>">
     <input type="hidden" id="hidden" name="_method" value="DELETE">
     <input type="submit" value="Delete Item">

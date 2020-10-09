@@ -62,7 +62,7 @@ class ItemsController < ApplicationController
                 erb :"items/edit"
             else
 
-                redirect "items/go_back"
+                redirect "items/show"
             end 
         end
 

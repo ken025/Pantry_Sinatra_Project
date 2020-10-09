@@ -1,13 +1,24 @@
 <!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <html>
   <head>
-    <title>MyPantry</title>
-  </head>
-  <body style="background-color: #CCFFFF;>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <div class="container">
-  <h1>Welcome to MyPantry!</h1>
-  <img class="z_h_9d80b z_h_2f2f0" src="https://image.shutterstock.com/image-vector/canned-goods-row-tinned-food-260nw-1016249392.jpg" alt="Canned goods in a row. Tinned goods food product stuff, preserved food, supplied in a sealed can. Vector flat style cartoon illustration isolated on white background" data-automation="mosaic-grid-cell-image">
+    <title>MyPantry</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=5.0" />
+
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+   
+  </head>
+  <body style="background-color: #E0FFFF;>
+
   
   <!-- loops through each of the flash keys, gives them a block and displays the aler -->
   <div class="wrapper">
@@ -18,8 +29,7 @@
   <% end %>
 
   <%= yield %>
-  
-</div>
+
 
   </body>
 </html>

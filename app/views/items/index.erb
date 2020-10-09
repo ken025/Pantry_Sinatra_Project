@@ -8,10 +8,10 @@
 
 <p><img alt="How to Stock a Food Pantry | Fix.com" class="n3VNCb" src="https://fixcom.azureedge.net/assets/content/15713/pantry-power-header.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 500px; height: 140px; margin: 30px 0px;"></p>
 
-<h1>Welcome, <%=current_user.username %></h1>
+<h1>Welcome, <%=current_user.username %>!</h1>
 <h2> You currently have: </h2>
 <ul>
-<p><% @items.uniq.each do |item| %></p>
+<p><% @items.each do |item| %></p>
 
   <!--the link directs you to each item's info-->
   <li><a href="/items/<%= item.id %>"> <%= item.name.capitalize %> </a></li>

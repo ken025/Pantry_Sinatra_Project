@@ -6,7 +6,6 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
     enable :sessions
-    set :sessions, true
     set :session_secret, ENV["SECRET"]
     register Sinatra::Flash
   end
@@ -31,8 +30,14 @@ helpers do
 
     def redirect_if_not_logged_in
       if !logged_in?
-        flash[:errors] = "You have to be logged in to view this page."
-        redirect "/login"
+        flash[:errors] = "You must log in to view this page."
+        redirect "/welcome"
+      end
+    end
+
+    def redirect_if_logged_in
+      if logged_in?
+        redirect "/items"
       end
     end
   end

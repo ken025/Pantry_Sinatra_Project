@@ -3,39 +3,27 @@ class ItemsController < ApplicationController
     # Shows user all of the items
         get '/items' do 
             # binding.pry
-            if logged_in?
-                @items = Item.all
+            redirect_if_not_logged_in
+                @items = Item.all.where(user_id: current_user)
 
             erb :"items/index"
-            else 
-
-                redirect "/login"
-            end 
         end 
     
     # Creates new item
         get '/items/new' do 
-            if logged_in?
+            redirect_if_not_logged_in
             @users = User.all
 
         erb :"items/new"
-            else 
-
-                redirect '/welcome' 
-            end 
         end 
     
     # Shows user specific item, by its id number
         get '/items/:id' do 
             #binding.pry
-        if logged_in?
-            id = params[:id]
-            @item = Item.find_by_id(id) 
+        redirect_if_not_logged_in
+            @item = Item.find_by_id(params[:id]) 
     
         erb :"items/show"
-        else 
-            redirect '/login'
-        end
     end 
     
     #Posts the new item to the table of items
@@ -55,6 +43,7 @@ class ItemsController < ApplicationController
         end 
         
         get '/items/:id/edit' do 
+            redirect_if_not_logged_in
             @item = Item.find_by_id(params[:id])
 
                 erb :"items/edit"

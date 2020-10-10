@@ -2,7 +2,7 @@
 A Sinatra app designed to provide users with a personlized list of items in their pantry to keep track of what they might be running low in. 
 
 - The users will be able to create an account
-- Once they create their account they will be able to add, edit, abd delete the selected item
+- Once the account is created, they will be able to add, edit, and delete the selected item
 
 ## Installation
 

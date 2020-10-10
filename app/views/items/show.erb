@@ -1,13 +1,12 @@
-<a href="/items">Back to your MyPantry!</a><br /><br />
+<a href="/items">&#8592; Back to your MyPantry!</a><br /><br />
 
 <h1><%= @item.name.upcase %> </h1>
 
-<h2> Quantity: <%= @item.quantity %> </h2>
-<h2> Available? <%= @item.available ? "&#10004;" : "Not available" %> </h2>
+<h3> Quantity: <%= @item.quantity %> </h3>
 
-<a href="/items/<%= @item.id %>/edit">Edit this item</a><br />
+<p><a href="/items/<%= @item.id %>/edit">Edit this item</a></p>
 
 <form method="POST" action="/items/<%= @item.id %>">
     <input type="hidden" id="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Delete Item">
+   <p> <input type="submit" value="Delete Item"></p>
 </form>

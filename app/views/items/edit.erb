@@ -1,14 +1,9 @@
-<h1> Edit your MyPantry list! </h1>
+<h1> Update your item's quantity: </h1>
+
+<h3><%= @item.name.upcase %> </h3>
 
 <form method="POST" action="/items/<%= @item.id %>">
-    <input type="hidden" id="hidden" name="_method" value="PATCH">
-    <select name="user_id">
-        <% @users.each do | user |%>
-            <option value="<%= user.id %>"><%= user.username %></option>
-        <% end %>
-    </select><br />
-
-    <h3> Name: <input type="text" name="name"></h3><br />
-    <h3> Quantity: <input name="quantity"></h3><br />
-    <input type="submit" value="Submit Change">
+<input type="hidden" id="hidden" name="_method" value="PATCH">
+    <h3> Quantity: <input name="quantity"></h3>
+    <p><input type="submit" value="Submit Change"></p>
 </form>

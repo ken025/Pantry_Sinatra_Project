@@ -19,20 +19,21 @@ class ApplicationController < Sinatra::Base
 
 # helper methods to limit user accessibility 
 helpers do
-    def logged_in?
-      session[:user_id]
-    end
-
-    def current_user
-
-         # memoization, uses the @user or finds the user's id and sets it to @user
-      @user ||= User.find_by(id: session[:user_id])
-    end
+  def logged_in?
+    session[:user_id]
   end
 
-#   def redirect_if_logged_in
-#     if logged_in?
-#       redirect "/items"
-#     end
-#   end
+  def current_user
+
+    # memoization, uses the @user or finds the user's id and sets it to @user
+    @current_user ||= User.find_by(id: session[:user_id])
+    end
+
+    def redirect_if_not_logged_in
+      if !logged_in?
+        flash[:errors] = "You have to be logged in to view this page."
+        redirect "/login"
+      end
+    end
+  end
 end

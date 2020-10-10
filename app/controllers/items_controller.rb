@@ -55,16 +55,10 @@ class ItemsController < ApplicationController
         end 
         
         get '/items/:id/edit' do 
-            @users = User.all 
             @item = Item.find_by_id(params[:id])
-            if @item.user.id == curent_user.id
 
                 erb :"items/edit"
-            else
-
-                redirect "items/show"
-            end 
-        end
+            end
 
         # matches form's action
         patch '/items/:id' do 
@@ -83,13 +77,13 @@ class ItemsController < ApplicationController
             # anything with '/:id' => looks up a specific item
         delete '/items/:id' do 
             @item = Item.find_by_id(params[:id])
-            if @item.user.id == curent_user.id
+        #     if user.id == curent_user.id
 
-            # .delete only deletes the object, .destroy deletes de object and asscociated objects
-                @item.destroy
-            else 
+        #     # .delete only deletes the object, .destroy deletes de object and asscociated objects
+                 @item.destroy
+        #     else 
 
             redirect "/items"
-        end 
+        # end 
     end
 end 

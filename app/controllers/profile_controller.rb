@@ -1,35 +1,53 @@
-class ProfileController < ApplicationController
+# class ProfileController < ApplicationController
 
-  get '/profile' do 
-    @items = Item.all.where(user_id: current_user.id)
+#   get '/profile' do 
+#     @items = Item.all.where(user_id: current_user.id)
 
-    erb :"profile/profile"
-  end
+#     erb :"profile/profile"
+#   end
 
-  patch '/items/:id' do 
-    # binding.pry
-    @item = Item.find_by_id(params[:id])
-    params.delete("_method")
-    if @item.update(params)
+#   post '/profile' do 
+#   end 
+#  end 
 
-        redirect "/items/#{@item.id}"
-    else
+# get '/users/:id/edit' do 
+#     redirect_if_not_logged_in
+#     @user = User.where(user_id: current_user.id)
+#     if @user 
 
-        redirect "items/new"
-    end
-end 
+#         erb :"profiles/edit"
+#     else
 
-    # anything with '/:id' => looks up a specific item
-delete '/items/:id' do 
-    @item = Item.find_by_id(params[:id])
-     if @user == curent_user.id
+#         redirect "/profiles"
+#     end
 
-    # .delete only deletes the object, .destroy deletes de object and asscociated objects
-         @item.destroy
+#   patch '/profile/:id' do 
+#     # binding.pry
+#     @user = User.find_by_id(params[:id])
+#     params.delete("_method")
+#     if @user.update(username: params[:username])
+
+#         redirect "/user/#{@user.id}"
+#     # else
+
+#     #     redirect "items/new"
+#     end
+# end 
 
 
-    redirect "/items"
- end 
-end
-end 
-end 
+# end
+
+# #     # anything with '/:id' => looks up a specific item
+# # delete '/items/:id' do 
+# #     @item = Item.find_by_id(params[:id])
+# #      if @user == curent_user.id
+
+# #     # .delete only deletes the object, .destroy deletes de object and asscociated objects
+# #          @item.destroy
+
+
+# #     redirect "/items"
+# #  end 
+# # end
+# # end 
+# #  end 

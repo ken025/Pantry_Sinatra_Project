@@ -7,4 +7,5 @@ end
 use Rack::MethodOverride #to send patch request
 use ItemsController
 use UsersController
+use ItemsController
 run ApplicationController

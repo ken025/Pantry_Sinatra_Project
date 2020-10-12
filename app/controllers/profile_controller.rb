@@ -1,10 +1,11 @@
-# class ProfileController < ApplicationController
+class ProfileController < ApplicationController
 
-#   get '/profile' do 
-#     @items = Item.all.where(user_id: current_user.id)
+  get '/profile' do 
+    @items = Item.all.where(user_id: current_user.id)
 
-#     erb :"profile/profile"
-#   end
+    erb :"profile/profile"
+  end
+end 
 
 #   post '/profile' do 
 #   end 

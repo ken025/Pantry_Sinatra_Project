@@ -62,7 +62,7 @@ class ItemsController < ApplicationController
 
                 redirect "items/new"
             end
-        end 
+        end
 
             # anything with '/:id' => looks up a specific item
         delete '/items/:id' do 

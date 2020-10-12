@@ -1,4 +1,11 @@
+<! DOCTYPE html>
+<html>
 <h1> Enter an item and the quantity:</h1>
+<body>
+<form action="upload.php" method="post" enctype="multipart/form-data">
+<input type="file" name="fileToUpload" id="fileToUpload">
+<input type="submit" value="Upload Image" name="submit">
+</form>
 
 <form method="POST" action="/items">
     <h3> <label for="name"> Name: </label> </h3> 
@@ -7,3 +14,5 @@
     <p><input type="text" name="quantity"></p>
     <p><input type="SUBMIT" value="Add Item"></p>
 </form>
+</body>
+</html>

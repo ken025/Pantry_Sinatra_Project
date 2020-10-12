@@ -1,13 +1,19 @@
 class UsersController < ApplicationController 
 
 get '/signup' do
-    erb :'users/signup'
+    erb :"users/signup"
   end
     
 get '/login' do
 
     erb :"users/login"
   end
+
+  # get '/profile' do 
+  #   @items = Item.all.where(user_id: current_user.id)
+
+  #   erb :"profile/profile"
+  # end
 
   post '/login' do
       #binding.pry

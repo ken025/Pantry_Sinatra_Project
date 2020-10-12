@@ -5,7 +5,6 @@ if ActiveRecord::Base.connection.migration_context.needs_migration?
 end
 
 use Rack::MethodOverride #to send patch request
-# use SessionsController
 use ItemsController
 use UsersController
 run ApplicationController

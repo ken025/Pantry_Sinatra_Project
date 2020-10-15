@@ -16,10 +16,10 @@ end
 #     @user = User.where(user_id: current_user.id)
 #     if @user 
 
-#         erb :"profiles/edit"
+#         erb :"profile/edit"
 #     else
 
-#         redirect "/profiles"
+#         redirect "/profile"
 #     end
 
 #   patch '/profile/:id' do 

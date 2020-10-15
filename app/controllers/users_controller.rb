@@ -9,18 +9,12 @@ get '/login' do
     erb :"users/login"
   end
 
-  # get '/profile' do 
-  #   @items = Item.all.where(user_id: current_user.id)
-
-  #   erb :"profile/profile"
-  # end
-
   post '/login' do
       #binding.pry
       #finds the user
       user = User.find_by(username: params[:username])
 
-      #authenticates the user (from decrypt gem)
+      #authenticates the user (from bcrypt gem)
       if user && user.authenticate(params[:password])
 
       # logs the user in and redirect

@@ -1,7 +1,11 @@
 <h1> Change your username: </h1>
 
-<form method="POST" action="/users/<%= @user.id %>">
-<input type="hidden" id="hidden" name="_method" value="PATCH">
-    <h3> Quantity: <input name="username"></h3>
-    <p><input type="submit" value="Submit Change"></p>
-</form>
+<div class="field">
+<label for="username" class="label">Username</label>
+<div class="control has-icons-left">
+    <input class="input" type="text" name="user[username]" placeholder="Text input">
+    <span class="icon is-small is-left">
+        <i class="fas fa-user"></i>
+    </span>
+</div>
+</div>

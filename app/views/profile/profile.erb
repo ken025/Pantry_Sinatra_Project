@@ -1,6 +1,11 @@
-<a href="/items">&#8592; Back to your MyPantry!</a>
+
+<div style="background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/spikes.png');">
+
+<div class="topleft"><a href="/items">&#8592; Back to your MyPantry!</a></div>
 <h1> Profile: <h1>
+
 <h2> Username: <%=current_user.username.capitalize %></h2>
 <h2> You have: <%=@items.count %> items </h2>
 <h2> MyPantrier since: <%=current_user.created_at %></h2>
 <a href="/items"> Change username </a>
+</div>

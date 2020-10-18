@@ -15,7 +15,7 @@
   body {
     background-color: rgb(95, 190, 186);
     color: #333;
-    font-family: 'Shadows Into Light Two', cursive;
+    font-family: 'Comfortaa', cursive;
     line-height: 18px;
   }
 
@@ -112,4 +112,85 @@
     font-size: 18px;
     line-height: 24px;
   }
+}
+  .fade-in {
+    animation: fadeIn ease 5s;
+    -webkit-animation: fadeIn ease 5s;
+    -moz-animation: fadeIn ease 5s;
+    -o-animation: fadeIn ease 5s;
+    -ms-animation: fadeIn ease 5s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+  }
+}
+  body {
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  .topnav a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: blue;
+  }
+.boxed {
+  background-color: rgb(95, 190, 186);
+  padding: 10px;
+  margin: 10px;
+}
 }

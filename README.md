@@ -7,9 +7,10 @@ A Sinatra app designed to provide users with a personlized list of items in thei
 ## Installation
 
   - Navigate to https://github.com/ken025/Pantry_Sinatra_Project
-  - Click the **Clone** and then the **clipboard** or copy the link above
-  - In your terminal, type `git clone` then paste the copied URL. 
-  - Run `bundle install` to load the Ruby gems and dependencies.
+  - Click **Clone** and then the **clipboard** or copy the link above
+  - In your terminal, type `git clone` then paste the copied URL
+  - Run `bundle install` to load the Ruby gems and dependencies
+  -To test the web application run `shotgun` and click the link provided
 
 ## Contributing
 

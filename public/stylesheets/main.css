@@ -13,7 +13,7 @@
 
   /* --- Welcome Page Styles --- */
   body {
-    background-color: rgb(95, 190, 186);
+    background-color: rgb(102, 204, 199);
     color: #333;
     font-family: 'Comfortaa', cursive;
     line-height: 18px;
@@ -189,7 +189,7 @@
     color: blue;
   }
 .boxed {
-  background-color: rgb(95, 190, 186);
+  background-color: rgb(102, 204, 199);
   padding: 10px;
   margin: 10px;
 }

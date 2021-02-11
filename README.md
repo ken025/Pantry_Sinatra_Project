@@ -10,7 +10,7 @@ A Sinatra app designed to provide users with a personlized list of items in thei
   - Click **Clone** and then the **clipboard** or copy the link above
   - In your terminal, type `git clone` then paste the copied URL
   - Run `bundle install` to load the Ruby gems and dependencies
-  -To test the web application run `shotgun` and click the link provided
+  - To test the web application run `shotgun` and click the link provided
 
 ## Contributing
 
